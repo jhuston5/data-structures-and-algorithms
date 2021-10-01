@@ -47,6 +47,9 @@ const containsAnd = (arr) => {
   return filteredString;
 };
 
+
+// return arr.filter(element => !forbiddenValues.includes(element));
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -121,6 +124,7 @@ const snorlaxData = {
 
 const getBaseStatGreaterThan = (arr, minBaseStat) => {
   // Solution code here...
+  return arr.filter(element => element.baseStat > minBaseStat);
 };
 
 /* ------------------------------------------------------------------------------------------------
