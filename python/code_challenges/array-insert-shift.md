@@ -6,7 +6,7 @@ Write a function called insertShiftArray which takes in an array and a value to 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
 
-![Whiteboard](/img/code-challenge-02-insert-shift-array.png)
+![Whiteboard](img/code-challenge-02-insert-shift-array.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
