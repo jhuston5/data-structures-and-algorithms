@@ -77,3 +77,5 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 
 
 ## [Code Challenge 01](/code_challenges/array-reverse.md)
+
+## [Code Challenge 02](/code_challenges/array-insert-shift.md)
