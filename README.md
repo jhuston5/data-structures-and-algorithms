@@ -21,3 +21,15 @@ To run your tests
 ### 401 Data Structures, Code Challenges
 
 - Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+
+#### Code Challenge 05 - Linked List Implementation
+
+This app creates Linked List and Node classes that will create a Linked List and Node values.
+
+Author: Joshua Huston
+
+Links and Resources
+
+Reflections and Comments
+
+This lab went fine, it took me approximately 3.5 hours to complete. It was a bit tough ensuring that the head and nodes were all pointing to each other correctly. I worked with Chris Rarig, Ian Cargill, and Bionca Bond to ensure that all the functions were working correctly.

@@ -1,10 +1,15 @@
-"""def handle_exceptions(method):
-    def wrapper(*args, kwargs):
+
+
+
+# Exception Error Handler
+def handle_exceptions(method):
+    def wrapper(*args, **kwargs):
         try:
-            method
-        except TypeError as error:
-            print(f'You received a {method.__name__} {error}')
-"""
+            method(*args, **kwargs)
+        except TypeError:
+            print(f'You received an error on {method.__name__} method.')
+    return wrapper
+
 
 class Node:
     """
@@ -27,6 +32,7 @@ class LinkedList:
         pass
 
 # Insert a new Node into the LinkedList
+    @handle_exceptions
     def insert(self, value):
         # method body here
         new_node = Node(value)
@@ -72,6 +78,8 @@ if __name__ == "__main__":
     print(f'Head: {test.head.value}')
     print(f'All Nodes: {test.to_string()}')
 
+    # Test error handling
+    test.insert()
 
 # print(test_output)
 
