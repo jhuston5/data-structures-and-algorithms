@@ -86,7 +86,7 @@ def test_to_string_empty():
     assert test_output == "NULL"
 
 
-# Test to see if one node can be appended to the end of a Linked List
+# 6-1 Test to see if one node can be appended to the end of a Linked List
 def test_append():
     ll = LinkedList()
     node1 = ll.insert("apple")
@@ -97,7 +97,7 @@ def test_append():
     assert test_output == "banana -> apple -> peach -> NULL"
 
 
-# Test to see if multiple nodes can be appended to the end of a Linked List
+# 6-2 Test to see if multiple nodes can be appended to the end of a Linked List
 def test_append_multiple():
     ll = LinkedList()
     node1 = ll.insert("apple")
@@ -108,7 +108,7 @@ def test_append_multiple():
     assert expected == "apple -> peach -> pineapple -> NULL"
 
 
-# Test if you can insert a node before a node in the middle of a Linked List
+# 6-3 Test if you can insert a node before a node in the middle of a Linked List
 def test_insert_mid_before():
     ll = LinkedList()
     node1 = ll.insert("apple")
@@ -120,17 +120,17 @@ def test_insert_mid_before():
     assert expected == "blueberry -> peach -> kiwi -> apple -> NULL"
 
 
-# Test if you can insert a node before the first node of a Linked List
-"""def test_insert_beg():
+# 6-4 Test if you can insert a node before the first node of a Linked List
+def test_insert_beg():
     ll = LinkedList()
     node1 = ll.insert("apple")
     ll.head == node1
     ll.insert_before("apple", "peach")
     expected = ll.to_string()
     assert expected == "peach -> apple -> NULL"
-"""
 
-# Test if you can insert a node after the middle node of a Linked List
+
+# 6-5 Test if you can insert a node after the middle node of a Linked List
 def test_insert_mid_after():
     ll = LinkedList()
     node1 = ll.insert("apple")
@@ -142,7 +142,7 @@ def test_insert_mid_after():
     assert expected == "blueberry -> kiwi -> peach -> apple -> NULL"
 
 
-# Test if you can insert a node after the last node of a linked list
+# 6-6 Test if you can insert a node after the last node of a linked list
 def test_insert_last_after():
     ll = LinkedList()
     node1 = ll.insert("apple")
@@ -151,3 +151,11 @@ def test_insert_last_after():
     ll.insert_after("apple", "peach")
     expected = ll.to_string()
     assert expected == "kiwi -> apple -> peach -> NULL"
+
+
+# 6-optional Test if you can append to an empty Linked List
+def test_append_empty():
+    ll = LinkedList()
+    node1 = ll.append("apple")
+    expected = ll.to_string()
+    assert expected == "apple -> NULL"

@@ -62,41 +62,36 @@ class LinkedList:
 
     # Add a new Node to the end (Tail) of the LinkedList
     def append(self, end_value):
-        new_end_node = Node(end_value)
-        current = self.head
-        while current:
-            if current.next == None:
-                current.next = new_end_node
-                break
-            current = current.next
+        # Handle exception where a LinkedList is empty when appending
+        if self.head is None:
+            self.head = Node(end_value)
+        else:
+            new_end_node = Node(end_value)
+            current = self.head
+            while current:
+                if current.next == None:
+                    current.next = new_end_node
+                    break
+                current = current.next
 
+    # Had help from Bionca finalizing
     # Adds a new Node and value right BEFORE the Node specified
     def insert_before(self, old_value, new_value):
-        new_node = Node(new_value)
-        current = self.head
+        # Logic to handle the old value being the head
+        if self.head.value == old_value:
+            new_node = Node(new_value)
+            new_node.next = self.head
+            self.head = new_node
+            # current = self.head
         # new_next = current.next
-        """if current.next == None:
-            print(f"Current Value= {current.value}")
-            print(f"NewNode.next = {new_node.next}")
-            print(f"NewNode= {new_node.value}")
-            new_node.next = current.value
-            current.next = current.value
-            current.value = new_node.value
-
-            print(f"current.value= {current.value}")
-        print(f"current.next= {current.next}")
-        print(f"newnode.value= {new_node.value}")
-        print(f"newnode.next= {new_node.next}")
-        print(f"current= {current.value}")"""
-
-        while current.next is not None:
-            new_next = current.next
-            print(f"New Next.value = {new_next.value}")
-            if new_next.value == old_value:
-                new_node.next = current.next
-                current.next = new_node
-                break
-            current = current.next
+        else:
+            current = self.head
+            while current.next != None:
+                if current.next.value == old_value:
+                    temp = current.next
+                    current.next = Node(new_value, temp)
+                    break
+                current = current.next
 
     # Adds a new Node and value right AFTER the Node specified
     def insert_after(self, old_value, new_value):
