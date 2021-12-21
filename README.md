@@ -47,4 +47,4 @@ Reflections and Comments
 
 This lab went fine, it took me approximately 3.5 hours to complete. Ensuring all of my head, next, and values were set correctly for all of the methods was definitely the hardest part. I worked with Cooper Boyce on the whiteboard portion.
 
-All tests passing except #4, will resubmit
+Completed all tests, including an optional test to append a value to an empty array. Had some help from Bionca to get my final test #4 passing! Had to handle an exception for the head value being the old value.
