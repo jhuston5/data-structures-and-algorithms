@@ -33,3 +33,18 @@ Links and Resources
 Reflections and Comments
 
 This lab went fine, it took me approximately 3.5 hours to complete. It was a bit tough ensuring that the head and nodes were all pointing to each other correctly. I worked with Chris Rarig, Ian Cargill, and Bionca Bond to ensure that all the functions were working correctly.
+
+
+#### Code Challenge 06 - Linked List Implementation
+
+This app creates Linked List and Node classes that will create a Linked List and Node values.
+
+Author: Joshua Huston
+
+Links and Resources
+![Whiteboard](/python/img/code-challenge-06-linked-list-implementation.png)
+Reflections and Comments
+
+This lab went fine, it took me approximately 3.5 hours to complete. Ensuring all of my head, next, and values were set correctly for all of the methods was definitely the hardest part. I worked with Cooper Boyce on the whiteboard portion.
+
+All tests passing except #4, will resubmit
