@@ -159,3 +159,59 @@ def test_append_empty():
     node1 = ll.append("apple")
     expected = ll.to_string()
     assert expected == "apple -> NULL"
+
+
+# 7-1 Test if k is greater than the length of the linked list
+def test_k_greater():
+    ll = LinkedList()
+    node1 = ll.insert("apple")
+    ll.head == node1
+    ll.insert("kiwi")
+    ll.insert("peach")
+    expected = ll.num_from_end(7)
+    assert (
+        expected == "Error - input value is greater than the length of the Linked List"
+    )
+
+
+# 7-2 Test if k is equal to the length of the linked list
+def test_k_equal():
+    ll = LinkedList()
+    node1 = ll.insert("apple")
+    ll.head == node1
+    ll.insert("kiwi")
+    ll.insert("peach")
+    print(ll.to_string())
+    expected = ll.num_from_end(2)
+    assert expected.value == "peach"
+
+
+# 7-3 Test if k is not a positive integer
+def test_k_less_than_zero():
+    ll = LinkedList()
+    node1 = ll.insert("apple")
+    ll.head == node1
+    ll.insert("kiwi")
+    ll.insert("peach")
+    expected = ll.num_from_end(-1)
+    assert expected == "Error - input value is less than 0"
+
+
+# 7-4 Test if the linked list is of a size 1
+def test_ll_is_one():
+    ll = LinkedList()
+    node1 = ll.insert("apple")
+    ll.head == node1
+    expected = ll.num_from_end(1)
+    assert expected.value == "apple"
+
+
+# 7-5 Happy Path Test if k is somewhere in the middle of a Linked List
+def test_k_middll():
+    ll = LinkedList()
+    node1 = ll.insert("apple")
+    ll.head == node1
+    ll.insert("kiwi")
+    ll.insert("peach")
+    expected = ll.num_from_end(1)
+    assert expected.value == "kiwi"

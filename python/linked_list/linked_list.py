@@ -63,16 +63,14 @@ class LinkedList:
     # Add a new Node to the end (Tail) of the LinkedList
     def append(self, end_value):
         # Handle exception where a LinkedList is empty when appending
+        new_end_node = Node(end_value)
         if self.head is None:
-            self.head = Node(end_value)
+            self.head = new_end_node
         else:
-            new_end_node = Node(end_value)
             current = self.head
-            while current:
-                if current.next == None:
-                    current.next = new_end_node
-                    break
+            while current.next:
                 current = current.next
+            current.next = new_end_node
 
     # Had help from Bionca finalizing
     # Adds a new Node and value right BEFORE the Node specified
@@ -103,6 +101,24 @@ class LinkedList:
                 current.next = new_node
             current = current.next
 
+    def num_from_end(self, k):
+        current = self.head
+
+        length = 0
+        while current is not None:
+            current = current.next
+            length += 1
+
+        if k > length:
+            return "Error - input value is greater than the length of the Linked List"
+        elif k < 0:
+            return "Error - input value is less than 0"
+
+        current = self.head
+        for i in range(1, (length - k)):
+            current = current.next
+        return current
+
 
 if __name__ == "__main__":
 
@@ -124,13 +140,13 @@ if __name__ == "__main__":
     print(f"Head: {test.head.value}")
     print(f"All Nodes: {test.to_string()}")
 """
-    test2.insert("apple")
+""" test2.insert("apple")
     test2.insert_before("apple", "peach")
     print(f"Head test 2: {test2.head.value}")
     print(f"All Nodes Test 2: {test2.to_string()}")
-
-    # Test error handling
-    test.insert()
+"""
+# Test error handling
+# """test.insert()"""
 
 # print(test_output)
 
