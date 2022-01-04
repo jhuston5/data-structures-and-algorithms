@@ -120,13 +120,28 @@ class LinkedList:
         return current
 
     def ll_zip(self, ll1, ll2):
+        ll = LinkedList()
         ll1_curr = ll1.head
         ll2_curr = ll2.head
+        # {head: blueberry, next: pineapple}
+        # print(f"ll2 Curr : {ll2_curr.value}, {ll2_curr.next.value}")
         while ll1_curr != None or ll2_curr != None:
-            self.append(ll1)
-            self.append(ll2)
-            ll1.current = ll1.next
-            ll2.current = ll2.next
+            if ll1_curr != None and ll2_curr != None:
+                # Append the current values
+                ll.append(ll1_curr.value)
+                ll.append(ll2_curr.value)
+                ll1_curr = ll1_curr.next
+                ll2_curr = ll2_curr.next
+                print(f"ll2 Curr : {ll2_curr}")
+            # Conditions in case we reach the
+            elif ll1_curr == None:
+                ll.append(ll2_curr.value)
+                ll2_curr = ll2_curr.next
+            elif ll2_curr == None:
+                ll.append(ll1_curr.value)
+                ll1_curr = ll1_curr.next
+        print(ll.to_string())
+        return ll
 
 
 if __name__ == "__main__":
@@ -134,17 +149,19 @@ if __name__ == "__main__":
     test = LinkedList()
     test2 = LinkedList()
     test3 = LinkedList()
+    test.insert("pomegranate")
     test.insert("pear")
     test.insert("raspberry")
     test.insert("kiwi")
+    test.insert("dragonfruit")
 
     test2.insert("apple")
     test2.insert("pineapple")
     test2.insert("blueberry")
 
-    test3.ll_zip(test2, test3)
-    print(test3)
-    """test.insert("pear")
+    expected = test3.ll_zip(test2, test)
+    print(f"test3: {expected.to_string()}")
+"""    test.insert("pear")
     test.insert("raspberry")
     test.insert("kiwi")
     test.insert("apple")

@@ -215,3 +215,49 @@ def test_k_middll():
     ll.insert("peach")
     expected = ll.num_from_end(1)
     assert expected.value == "kiwi"
+
+
+# 8-1 Happy Path test
+def test_zip():
+    empty_ll = LinkedList()
+    ll = LinkedList()
+    ll.insert("pear")
+    ll.insert("apple")
+    ll.insert("raspberry")
+    ll.insert("pineapple")
+    ll.insert("kiwi")
+    ll.insert("blueberry")
+    test = LinkedList()
+    test.insert("pear")
+    test.insert("raspberry")
+    test.insert("kiwi")
+    test2 = LinkedList()
+    test2.insert("apple")
+    test2.insert("pineapple")
+    test2.insert("blueberry")
+    expected = empty_ll.ll_zip(test2, test)
+    assert expected.to_string() == ll.to_string()
+
+
+# 8-2 Extra Node test
+def test_zip_extra_node():
+    empty_ll = LinkedList()
+    ll = LinkedList()
+    ll.insert("pomegranate")
+    ll.insert("pear")
+    ll.insert("apple")
+    ll.insert("raspberry")
+    ll.insert("pineapple")
+    ll.insert("kiwi")
+    ll.insert("blueberry")
+    test = LinkedList()
+    test.insert("pomegranate")
+    test.insert("pear")
+    test.insert("raspberry")
+    test.insert("kiwi")
+    test2 = LinkedList()
+    test2.insert("apple")
+    test2.insert("pineapple")
+    test2.insert("blueberry")
+    expected = empty_ll.ll_zip(test2, test)
+    assert expected.to_string() == ll.to_string()
