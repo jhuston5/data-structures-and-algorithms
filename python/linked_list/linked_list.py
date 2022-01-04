@@ -119,12 +119,31 @@ class LinkedList:
             current = current.next
         return current
 
+    def ll_zip(self, ll1, ll2):
+        ll1_curr = ll1.head
+        ll2_curr = ll2.head
+        while ll1_curr != None or ll2_curr != None:
+            self.append(ll1)
+            self.append(ll2)
+            ll1.current = ll1.next
+            ll2.current = ll2.next
+
 
 if __name__ == "__main__":
 
     test = LinkedList()
     test2 = LinkedList()
+    test3 = LinkedList()
+    test.insert("pear")
+    test.insert("raspberry")
+    test.insert("kiwi")
 
+    test2.insert("apple")
+    test2.insert("pineapple")
+    test2.insert("blueberry")
+
+    test3.ll_zip(test2, test3)
+    print(test3)
     """test.insert("pear")
     test.insert("raspberry")
     test.insert("kiwi")

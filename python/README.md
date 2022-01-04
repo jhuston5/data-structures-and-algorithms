@@ -79,3 +79,63 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 ## [Code Challenge 01](/code_challenges/array-reverse.md)
 
 ## [Code Challenge 02](/code_challenges/array-insert-shift.md)
+
+
+
+- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+
+#### Code Challenge 05 - Linked List Implementation
+
+This app creates Linked List and Node classes that will create a Linked List and Node values.
+
+Author: Joshua Huston
+
+Links and Resources
+
+Reflections and Comments
+
+This lab went fine, it took me approximately 3.5 hours to complete. It was a bit tough ensuring that the head and nodes were all pointing to each other correctly. I worked with Chris Rarig, Ian Cargill, and Bionca Bond to ensure that all the functions were working correctly.
+
+
+#### Code Challenge 06 - Linked List Implementation
+
+This app creates Linked List and Node classes that will create a Linked List and Node values.
+
+Author: Joshua Huston
+
+Links and Resources
+![Whiteboard](/python/img/code-challenge-06-linked-list-implementation.png)
+Reflections and Comments
+
+This lab went fine, it took me approximately 3.5 hours to complete. Ensuring all of my head, next, and values were set correctly for all of the methods was definitely the hardest part. I worked with Cooper Boyce on the whiteboard portion.
+
+Completed all tests, including an optional test to append a value to an empty array. Had some help from Bionca to get my final test #4 passing! Had to handle an exception for the head value being the old value.
+
+### Code Challenge 07 - Linked List Extension Select Kth Number
+
+This app finds k-th value from the end of a linked list.
+
+Author: Joshua Huston
+
+Links and Resources
+![Whiteboard](/python/img/code-challenge-07.png)
+Reflections and Comments
+
+This lab went well, it took me approximately 2.5 hours to complete. I worked with Edris Berg on the whiteboard portion.
+
+Completed all tests.
+
+
+### Code Challenge 08 - Linked List Extension Zip List
+
+This app takes in two linked lists and merges the two into a new linked list.
+
+Author: Joshua Huston
+
+Links and Resources
+![Whiteboard](/python/img/code-challenge-08.png)
+Reflections and Comments
+
+I worked with Bionca Bond on the whiteboard portion.
+
+Submitting whiteboard, have not completed tests and code.

@@ -49,7 +49,7 @@ This lab went fine, it took me approximately 3.5 hours to complete. Ensuring all
 
 Completed all tests, including an optional test to append a value to an empty array. Had some help from Bionca to get my final test #4 passing! Had to handle an exception for the head value being the old value.
 
-### Code Challenge 07 - Linked List Extension Select Kth Number
+### [Code Challenge 07 - Linked List Extension Select Kth Number](/python/README.md)
 
 This app finds k-th value from the end of a linked list.
 
@@ -62,3 +62,18 @@ Reflections and Comments
 This lab went well, it took me approximately 2.5 hours to complete. I worked with Edris Berg on the whiteboard portion.
 
 Completed all tests.
+
+
+### [Code Challenge 08 - Linked List Extension Zip List](/python/README.md)
+
+This app takes in two linked lists and merges the two into a new linked list.
+
+Author: Joshua Huston
+
+Links and Resources
+![Whiteboard](/python/img/code-challenge-08.png)
+Reflections and Comments
+
+I worked with Bionca Bond on the whiteboard portion.
+
+Submitting whiteboard, have not completed tests and code.
