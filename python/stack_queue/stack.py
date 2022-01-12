@@ -1,10 +1,11 @@
 from stack_queue.node import Node
 
 
-# from stack_queue.node import Node
-
-
 class Stack:
+    """
+    Create a Stack Class
+    """
+
     def __init__(self, top=None):
         self.top = top
 
@@ -13,25 +14,38 @@ class Stack:
         node = Node(value)
         node.next = self.top
         self.top = node
-        pass
 
     # Removes the node from the top of the stack
-    def pop():
-        pass
-        # Should raise exception when called on empty stack
-        # Returns: the value from node from the top of the stack
+    def pop(self):
+        if self.isEmpty() == True:
+            raise Exception("Error - This Stack is Empty")
+        temp = self.top
+        self.top = self.top.next
+        temp.next = None
+        return temp.value
 
-    def peek():
-        pass
-        # Returns: Value of the node located at the top of the stack
-        # Should raise exception when called on empty stack
+    def peek(self):
+        if self.top == None:
+            raise Exception("Error - This Stack is Empty")
+        return self.top.value
 
-    def isEmpty():
-        pass
-        # Returns: Boolean indicating whether or not the stack is empty.
+    def isEmpty(self):
+        if self.top == None:
+            return True
+        else:
+            return False
 
 
 if __name__ == "__main__":
     stack = Stack()
+    stack2 = Stack()
+    stack.push("Dalinar")
+    stack.push("Shallan")
+    stack.push("Jasnah")
     stack.push("Kaladin")
-    # print_stack = LinkedList.to_string(stack)
+    stack.push("Adolin")
+    stack.pop()
+    stack.peek()
+    stack.isEmpty()
+    stack2.isEmpty()
+    # stack2.pop()
