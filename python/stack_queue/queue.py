@@ -1,4 +1,4 @@
-from stack_queue.node import Node
+from node import Node
 
 
 class Queue:

@@ -1,4 +1,7 @@
-from stack_queue.node import Node
+try:
+    from stack_queue.node import Node
+except:
+    from node import Node
 
 
 class Stack:

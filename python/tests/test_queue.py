@@ -1,4 +1,3 @@
-from stack_queue.node import Node
 from stack_queue.stack import Stack
 from stack_queue.queue import Queue
 
