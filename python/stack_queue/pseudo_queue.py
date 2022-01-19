@@ -45,7 +45,7 @@ class PseudoQueue:
         print(f"Final Stack2 Top: {self.stack2.top.value}")
 
     def dequeue(self):
-        print(f"Dequeued Value: {self.stack2.pop()}")
+        # print(f"Dequeued Value: {self.stack2.pop()}")
         print(f"DQ Stack 2 Top Value: {self.stack2.top.value}")
         return self.stack2.pop()
 
