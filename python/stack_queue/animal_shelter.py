@@ -1,6 +1,3 @@
-from doctest import FAIL_FAST
-
-
 try:
     from stack_queue.queue import Queue
     from stack_queue.stack import Stack
@@ -17,11 +14,15 @@ class AnimalShelter:
         self.queue = Queue()
         self.stack = Stack()
         self.animal = ""
-        self.initialized = False
 
     def enqueue(self, animal):
+        # node = Animal(animal)
+        # animal_node = Node(node)
+
         node = Node(animal)
+
         if self.queue.isEmpty() == True:
+
             self.queue.front = node
             self.queue.rear = node
 
@@ -38,18 +39,13 @@ class AnimalShelter:
                 status = False
             else:
                 temp = self.queue.front
-                # print(temp.value)
                 self.stack.push(self.queue.front)
                 self.queue.front = self.queue.front.next
-                print(self.queue.front.value)
 
         while self.stack.top is not None:
             temp = self.queue.front
             self.queue.front = self.stack.pop()
             self.queue.front.next = temp
-            print(
-                f"New Front: {self.queue.front.value}, new front next: {self.queue.front.next.value}"
-            )
 
         print(f"First matching animal: {self.animal}")
         return self.animal
@@ -59,12 +55,13 @@ if __name__ == "__main__":
     test_shelter = AnimalShelter()
     test_shelter.enqueue("cat")
 
-    test_shelter.enqueue("cat")
+    # test_shelter.enqueue("cat")
     test_shelter.enqueue("dog")
     test_shelter.enqueue("cat")
     test_shelter.enqueue("cat")
 
     test_shelter.dequeue("dog")
+
     # print(f"Test Pointer: {test_shelter.pointer}")
     # print(f"Final Rear: {test_shelter.queue1.rear.value}")
 
