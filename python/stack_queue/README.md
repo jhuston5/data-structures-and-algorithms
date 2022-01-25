@@ -1,4 +1,36 @@
 
+# Code Challenge 12 - Validate Brackets
+
+This app creates a validate brackets function that takes in a string of various bracket characters ({[]}) and determines if the brackets in the string are balanced.
+
+## Validate Brackets
+
+### Function:
+
+- Created a dictionary of the bracket pairs
+- Iterated through the string, checking if it was a key or a value.
+- If it was a key, stored the char in a stack
+- If it was a value, popped the most recent stack value and checked if they were the same.
+- Continued through the whole string; if able to iterate through the whole thing do a final check to see if there is an empty stack
+- Return true or false.
+
+### Tests:
+
+- Passing a correct string returns True
+- Passing an incorrect string returns False
+- Passing a string with characters other than brackets ignores those characters
+
+## Author: Joshua Huston
+
+## Links and Resources
+
+![Whiteboard](/python/img/code-challenge-13.png)
+
+## Reflections and Comments
+
+This was a cool code challenge - thanks to hints from Roger and a member of our class, Wenhao, I felt like I was able to visualize and frame this problem very well. I'm sure there are more efficient ways to solve this problem, but I feel that I was able to come up with a solid solution that meets the parameters of the problem. All tests passing. I was very happy with how I methodically worked through this problem.
+
+
 # Code Challenge 12 - Animal Shelter
 
 This app creates an Animal Shelter class that uses a queue and a stack to determine what kinds of animals are taken out of the shelter.
