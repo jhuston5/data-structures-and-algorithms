@@ -33,8 +33,13 @@ def test_bt_empty_root_none():
     assert bt.root == None
 
 
+def test_bt_single_root():
+    bt = BinaryTree("apple")
+    assert bt.root == "apple"
+
+
 # Pre Order Test
-def test_bt_left_right():
+def test_bt_pre_order():
 
     #           apple
     #       /           \
@@ -55,7 +60,7 @@ def test_bt_left_right():
 
 
 # In Order Test
-def test_bt_left_root_right():
+def test_bt_in_order():
 
     #           apple
     #       /           \
@@ -76,7 +81,7 @@ def test_bt_left_root_right():
 
 
 # Post Order Test
-def test_bt_left_right_root():
+def test_bt_post_order():
 
     #           apple
     #       /           \
@@ -96,37 +101,52 @@ def test_bt_left_right_root():
     assert order_list == ["pear", "orange", "apple"]
 
 
-# Add method
+# Add Method Test
 def test_add():
-    mid = Node(100)
-    l = Node(50)
-    r = Node(200)
+    bt = BinarySearchTree()
+    bt.add(100)
+    bt.add(50)
+    bt.add(200)
+    bt.add(75)
 
-    bt = BinaryTree(mid)
-    mid.left = l
-    mid.right = r
-
-    bst = BinarySearchTree(bt)
-    bst.add(25)
-    expected = 25
-    assert bst.root.left == expected
+    expected = 75
+    assert bt.root.left.right.value == expected
 
 
-# Contain Method
-def test_bt_left_right_root():
+# Contain Method Test
+def test_bt_():
 
     #           apple
     #       /           \
     #   pear          orange
-
-    apple = Node("apple")
-    pear = Node("pear")
-    orange = Node("orange")
-
-    bt = BinaryTree(apple)
-    bst = BinarySearchTree(bt)
-    apple.left = pear
-    apple.right = orange
+    bt = BinarySearchTree()
+    bt.add(100)
+    bt.add(50)
+    bt.add(200)
+    bt.add(75)
 
     expected = True
-    assert expected == bst.contains(bst.root, "apple")
+    assert expected == bt.contains(100)
+
+
+# For a Binary Search Tree, can successfully add a left child and right child properly to a node
+def test_add_left_child():
+    bt = BinarySearchTree()
+    bt.add(100)
+    bt.add(50)
+    bt.add(200)
+    bt.add(25)
+
+    expected = 25
+    assert bt.root.left.left.value == expected
+
+
+def test_add_right_child():
+    bt = BinarySearchTree()
+    bt.add(100)
+    bt.add(50)
+    bt.add(200)
+    bt.add(250)
+
+    expected = 250
+    assert bt.root.right.right.value == expected

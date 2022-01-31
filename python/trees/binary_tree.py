@@ -26,12 +26,6 @@ class BinaryTree:
         walk(self.root)
         return tree_val
 
-        # if root is not None:
-        #     tree_val.append(root)
-        #     tree_val = tree_val + self.pre_order(root.left)
-        #     tree_val = tree_val + self.pre_order(root.right)
-        # return tree_val
-
     def in_order(self):
         # left > root > right
         tree_val = []
@@ -60,51 +54,58 @@ class BinaryTree:
         walk(self.root)
         return tree_val
 
+    def add(self, value):
+        node = Node(value)
+
+        if self.is_empty():
+            self.root = node
+
+    def is_empty(self):
+        try:
+            self.root.value
+            return False
+        except:
+            return True
+
 
 class BinarySearchTree(BinaryTree):
-    # def __init__(self, root=None):
-    #     self.root = root
-
     def add(self, value):
-        def walk(root, value):
-            print(root.value)
-            if not root.left:
-                root.left = Node(value)
-            else:
-                walk(root.left, value)
-            if not root.right:
-                root.right = Node(value)
-            else:
-                walk(root.right, value)
+        def walk(root):
+            if self.root is None:
+                self.root = Node(value)
+                return
 
-        walk(self.root, value)
+            if value > root.value:
+                if root.right is None:
+                    root.right = Node(value)
+                else:
+                    walk(root.right)
+            if value < root.value:
+                if root.left is None:
+                    root.left = Node(value)
+                else:
+                    walk(root.left)
 
-    # Had help from Bionca here
-    def contains(self, node, value):
-        if node:
-            if node.value == value:
+        walk(self.root)
+
+    def contains(self, value):
+        def walk(root):
+            if root is None:
+                return False
+
+            if root.value == value:
                 return True
-            if node.value > value:
-                return self.contains(node.left, value)
-            if node.value < value:
-                return self.contains(node.right, value)
-        else:
-            return False
 
-    # def add(self, root, value):
-    #     # Check if the value is greater than the root
-    #     # If the root is None,
-    #     if root is None:
-    #         root = Node(value)
-    #         return root
-    #     else:
-    #         if root.value == value:
-    #             return root
-    #         elif root.value < value:
-    #             root.right = add(root.right, value)
-    #         else:
-    #             root.left = add(root.left, value)
-    #     return root
+            elif root.value < value:
+                return walk(root.right)
+
+            elif root.value > value:
+                return walk(root.left)
+
+            else:
+                return False
+
+        return walk(self.root)
 
 
 # Notes
