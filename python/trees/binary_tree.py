@@ -60,12 +60,12 @@ class BinaryTree:
         if self.is_empty():
             self.root = node
 
-    def is_empty(self):
-        try:
-            self.root.value
-            return False
-        except:
-            return True
+    # def is_empty(self):
+    #     try:
+    #         self.root.value
+    #         return False
+    #     except:
+    #         return True
 
 
 class BinarySearchTree(BinaryTree):

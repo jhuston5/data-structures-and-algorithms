@@ -115,10 +115,6 @@ def test_add():
 
 # Contain Method Test
 def test_bt_():
-
-    #           apple
-    #       /           \
-    #   pear          orange
     bt = BinarySearchTree()
     bt.add(100)
     bt.add(50)
