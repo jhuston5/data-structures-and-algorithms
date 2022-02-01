@@ -114,7 +114,7 @@ def test_add():
 
 
 # Contain Method Test
-def test_bt_():
+def test_bt_contains():
     bt = BinarySearchTree()
     bt.add(100)
     bt.add(50)
@@ -146,3 +146,105 @@ def test_add_right_child():
 
     expected = 250
     assert bt.root.right.right.value == expected
+
+
+# Test Root being the largest
+def test_max_root():
+
+    #         6
+    #       /   \
+    #      9     3
+    #     / \   /  \
+    #    8   4 5    1
+
+    start = Node(6)
+
+    bt = BinaryTree(start)
+    # start.left = Node(9)
+    # start.right = Node(3)
+    # print(bt.root.value)
+    assert bt.max_val() == 6
+
+
+# test left leaf largest
+def test_max_left_leaf():
+
+    #         6
+    #       /   \
+    #      9     3
+    #     / \   /  \
+    #    8   4 5    1
+
+    start = Node(6)
+    bt = BinaryTree(start)
+    start.left = Node(9)
+    start.right = Node(3)
+    start.left.left = Node(8)
+    start.left.right = Node(4)
+    start.right.left = Node(5)
+    start.right.right = Node(1)
+
+    assert bt.max_val() == 9
+
+
+# test right leaf largest
+def test_max_right_leaf():
+
+    #         6
+    #       /   \
+    #      3     9
+    #     / \   /  \
+    #    8   4 5    1
+
+    start = Node(6)
+    bt = BinaryTree(start)
+    start.left = Node(3)
+    start.right = Node(9)
+    start.left.left = Node(8)
+    start.left.right = Node(4)
+    start.right.left = Node(5)
+    start.right.right = Node(1)
+
+    assert bt.max_val() == 9
+
+
+# test middle left largest
+def test_max_left_mid_leaf():
+
+    #         6
+    #       /   \
+    #      3     4
+    #     / \   /  \
+    #    8   9 5    1
+
+    start = Node(6)
+    bt = BinaryTree(start)
+    start.left = Node(3)
+    start.right = Node(4)
+    start.left.left = Node(8)
+    start.left.right = Node(9)
+    start.right.left = Node(5)
+    start.right.right = Node(1)
+
+    assert bt.max_val() == 9
+
+
+# test middle right largest
+def test_max_right_mid_leaf():
+
+    #         6
+    #       /   \
+    #      3     4
+    #     / \   /  \
+    #    8   5 9    1
+
+    start = Node(6)
+    bt = BinaryTree(start)
+    start.left = Node(3)
+    start.right = Node(4)
+    start.left.left = Node(8)
+    start.left.right = Node(5)
+    start.right.left = Node(9)
+    start.right.right = Node(1)
+
+    assert bt.max_val() == 9

@@ -1,6 +1,3 @@
-from audioop import add
-
-
 try:
     from trees.node import Node
 
@@ -54,11 +51,26 @@ class BinaryTree:
         walk(self.root)
         return tree_val
 
-    def add(self, value):
-        node = Node(value)
+    # def add(self, value):
+    #     node = Node(value)
 
-        if self.is_empty():
-            self.root = node
+    #     if self.is_empty():
+    #         self.root = node
+
+    def max_val(self):
+        maximum = 0
+
+        def walk(root):
+            nonlocal maximum
+            print(maximum)
+            if root is None:
+                return
+            maximum = max(root.value, maximum)
+            walk(root.left)
+            walk(root.right)
+
+        walk(self.root)
+        return maximum
 
     # def is_empty(self):
     #     try:
@@ -106,6 +118,3 @@ class BinarySearchTree(BinaryTree):
                 return False
 
         return walk(self.root)
-
-
-# Notes

@@ -1,3 +1,28 @@
+# Code Challenge 16 - Max Value
+
+This app creates a function that finds the maximum value in an unordered binary tree.
+
+### Functions:
+
+- max_val(): finds a maximum value within an unordered binary tree.
+
+### Tests:
+
+- Test if the a tree with only a root value will be returned as max
+- Test for a max left leaf
+- Test for a max right leaf
+- Test for a max right-middle leaf
+- Test for a max left-middle leaf
+
+## Author: Joshua Huston
+
+## Links and Resources
+
+![Whiteboard](/python/img/code-challenge-16.png)
+
+## Reflections and Comments
+
+My whiteboard was extremely helpful for this lab. I was able to create a visualization that made sense to me, which made writing a clear algorithm and code far simpler for me. One challenge was finding a way to store the max variable in a recursive function, and the way I solved was to make the maxixum a nonlocal variable. Hopefully that is not a big programming worst practice!
 # Code Challenge 15 - Trees
 
 This app creates a Binary Tree class, as well as a Binary Search tree.
@@ -12,9 +37,13 @@ This app creates a Binary Tree class, as well as a Binary Search tree.
 
 ### Tests:
 
-- Passing a correct string returns True
-- Passing an incorrect string returns False
-- Passing a string with characters other than brackets ignores those characters
+- empty root
+- single root
+- in_order
+- pre_order
+- post_order
+- add
+- contains
 
 ## Author: Joshua Huston
 
@@ -27,8 +56,3 @@ This app creates a Binary Tree class, as well as a Binary Search tree.
 Tough lab here - trying to continue visualizing recursive functions and build them out appropriately. Overall, lots of learning in this lab.
 
 
-# Pass largest number in recursive call
-# then return largest value
-# Start from one of the traversal orders
-# Test root being the largest
-# Test leaf on the left, right, middle left, middle right.
