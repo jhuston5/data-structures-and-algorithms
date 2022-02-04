@@ -51,11 +51,11 @@ class BinaryTree:
         walk(self.root)
         return tree_val
 
-    # def add(self, value):
-    #     node = Node(value)
+    def add(self, value):
+        node = Node(value)
 
-    #     if self.is_empty():
-    #         self.root = node
+        if self.is_empty():
+            self.root = node
 
     def max_val(self):
         maximum = 0
@@ -72,12 +72,12 @@ class BinaryTree:
         walk(self.root)
         return maximum
 
-    # def is_empty(self):
-    #     try:
-    #         self.root.value
-    #         return False
-    #     except:
-    #         return True
+    def is_empty(self):
+        try:
+            self.root.value
+            return False
+        except:
+            return True
 
 
 class BinarySearchTree(BinaryTree):
