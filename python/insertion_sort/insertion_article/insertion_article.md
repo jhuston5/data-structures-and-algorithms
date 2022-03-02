@@ -14,6 +14,15 @@
 
       arr[j + 1] <-- temp'''
 
+Insertion sort iterates through an array using nested for loops.
+
+Insertion sort first takes the array length for the outer loop.
+
+Next, it iterates through that array length starting at a standard index number.
+
+The outside for loop is acting as a pointer. The while loop is sorting everything before the pointer, and does so every time the pointer is shifted ahead.
+
+Example List:
 [8,4,23,42,16,15]
 
 Round 1
@@ -93,13 +102,3 @@ temp = arr[i(5)] = 15
 
 arr[j(1) + 1] => temp = 15
 [4, 8, 15, 16, 23, 42]
-
-// Definitions
-
-Insertion sort iterates through an array using nested for loops.
-
-Insertion sort first takes the array length for the outer loop.
-
-Next, it iterates through that array length starting at a standard index number.
-
-The outside for loop is acting as a pointer. The while loop is sorting everything before the pointer, and does so every time the pointer is shifted ahead.
