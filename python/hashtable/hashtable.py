@@ -15,7 +15,7 @@ class Hashtable:
         index = self.hash(key)
         if self.bucket[index] is None:
             self.bucket[index] = HashList(key, value)
-            print(self.bucket[index])
+            # print(self.bucket[index])
         else:
             head = self.bucket[index]
             while head is not None:
@@ -26,9 +26,9 @@ class Hashtable:
                     head.next = HashList(key, value)
                     break
                 head = head.next
-        print(self.bucket[index])
-        print(index)
-        print(self.bucket)
+        # print(self.bucket[index])
+        # print(index)
+        # print(self.bucket)
         # Add
         # Arguments: key, value
         # Returns: nothing
@@ -38,11 +38,11 @@ class Hashtable:
     def get(self, key):
         location = self.hash(key)
         head = self.bucket[location]
-        print(f"Get: {location}")
-        print(f"Get: {head}")
+        # print(f"Get: {location}")
+        # print(f"Get: {head}")
         while head is not None:
             if head.key == key:
-                print(head.value)
+                # print(head.value)
                 return head.value
             head = head.next
         return None
@@ -69,7 +69,6 @@ class Hashtable:
 
         primed = sum * 97
         index = primed % self.size
-        print
         return index
 
     def keys(self):
@@ -80,7 +79,7 @@ class Hashtable:
                 key_list.append(head.key)
                 head = head.next
         key_list.sort()
-        print(key_list)
+        # print(key_list)
         return key_list
 
         # keys
