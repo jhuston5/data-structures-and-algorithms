@@ -17,7 +17,7 @@ def test_import():
 # @pytest.fixture
 # def HT():
 #     HT = Hashtable()
-#     HT.add("Cat", "calico")
+#     HT.add("Cat", "calico")œ
 #     HT.add("Dog", "dachsund")
 #     HT.add("Shark", "mako")
 #     print(HT)
