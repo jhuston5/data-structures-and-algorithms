@@ -1,3 +1,10 @@
+try:
+    from stack_queue.queue import Queue
+
+except:
+    from queue import Queue
+
+
 class Graph:
     def __init__(self):
         self.adjacency_list = {}
@@ -69,6 +76,43 @@ class Graph:
         # Arguments: none
         # Returns the total number of nodes in the graph
 
+    def breadth_first(self, v):
+        nodes = []
+        Q = Queue()
+        visited = {v}
+        print(visited)
+        Q.enqueue(v)
+        visited.add(v)
+        print(visited)
+
+        while Q:
+            front = Q.dequeue()
+            nodes.append(front)
+
+            for child in front:
+                if child not in visited:
+                    visited.add(child)
+                    Q.enqueue(child)
+        return nodes
+
+        # DECLARE nodes <-- new List()
+        # DECLARE breadth <-- new Queue()
+        # DECLARE visited <-- new Set()
+
+        # breadth.Enqueue(vertex)
+        # visited.Add(vertex)
+
+        # while (breadth is not empty)
+        #     DECLARE front <-- breadth.Dequeue()
+        #     nodes.Add(front)
+
+        #     for each child in front.Children
+        #         if(child is not visited)
+        #             visited.Add(child)
+        #             breadth.Enqueue(child)
+
+        # return nodes;
+
 
 class Vertex:
     def __init__(self, value):
@@ -91,3 +135,4 @@ if __name__ == "__main__":
     print(graph.size())
     print(graph.get_neighbor("c"))
     print(graph.get_node())
+    print(graph.breadth_first("a"))
