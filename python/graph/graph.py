@@ -1,5 +1,5 @@
 try:
-    from stack_queue.queue import Queue
+    from graph.queue import Queue
 
 except:
     from queue import Queue
